@@ -40,3 +40,9 @@ cc_library(
     hdrs = glob(["src/*.h"]),
     visibility = ["//test:__pkg__"],
 )
+
+cc_binary(
+    name = "benchmark-first-run",
+    srcs = ["src/try-me.cc"],
+    deps = [":benchmark"]
+)
